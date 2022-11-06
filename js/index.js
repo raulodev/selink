@@ -49,8 +49,9 @@ function recharge_data() {
         input.href = u;
 
         const btn_delete = document.createElement("button");
-        btn_delete.textContent = "del";
+        btn_delete.textContent = "-";
         btn_delete.id = i;
+        btn_delete.className='ml-4 mt-1 bg-blue-400 w-8 h-8 p-1 text-center text-white rounded font-bold'
         btn_delete.onclick = del_btn;
 
         const li = document.createElement("li");

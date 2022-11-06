@@ -47,6 +47,7 @@ function recharge_data() {
         const input = document.createElement("a");
         input.textContent = d;
         input.href = u;
+        input.className='text-blue-400 font-semibold text-xl underline'
 
         const btn_delete = document.createElement("button");
         btn_delete.textContent = "-";

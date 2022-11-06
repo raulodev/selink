@@ -67,8 +67,6 @@ function recharge_data() {
 
 function del_btn(e) {
     const id = `${e.composedPath()[0].id}`;
-    const link = document.getElementById(id);
-    link.remove();
 
     var data = localStorage.getItem("selink");
     var data = JSON.parse(data);
@@ -77,5 +75,7 @@ function del_btn(e) {
 
     const jsonData = JSON.stringify(data);
     localStorage.setItem("selink", jsonData);
+
+    recharge_data()
 }
 recharge_data();

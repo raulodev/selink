@@ -67,9 +67,9 @@ function recharge_data() {
 
         
         const btn_delete = document.createElement("button");
-        btn_delete.appendChild(iconSvg)
         btn_delete.id = i;
-        btn_delete.className='btn-delete ml-4 mt-1 border text-blue-400 hover:text-white border-blue-400 border hover:border-white hover:bg-blue-400  p-1 text-center text-white rounded font-bold'
+        btn_delete.className='ml-4 mt-1 border text-blue-500 hover:text-white border-blue-400 border hover:border-white hover:bg-blue-400  p-1 text-center text-white rounded font-bold'
+        btn_delete.appendChild(iconSvg)
         btn_delete.onclick = del_btn;
         
 

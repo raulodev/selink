@@ -11,28 +11,39 @@
         <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/index.css" />
     </head>
-
+    <div class="fixed bottom-10 right-10">
+        <button id="control-nav" onclick="control_nav()" class="flex justify-center item-center  h-12 w-12 text-4xl bg-blue-500 rounded text-white 
+        focus:outline-none shadow-md">
+        <div>
+            →
+        </div>
+        </button>
+    </div>
 
     <body class="bg-white">
-        <div class="grid grid-cols-3 md:grid-cols-2 w-full bg-blue-500 p-4 fixed">
+
+        <div id="nav" class="grid grid-cols-3 md:grid-cols-2  w-full bg-gradient-to-tr from-blue-500 to-blue-600 p-4 fixed shadow-md">
             <div class="col-span-1 flex justify-end items-center">
-                <button class="bg-white hover:ring-4 hover:ring-blue-400 w-12 h-12 p-1 mr-6 text-center text-blue-400 shadow-blue-500 shadow-sm font-bold rounded 
+                <button class="focus:outline-none bg-white focus:ring-4 focus:ring-blue-400 w-12 h-12 p-1 mr-6 text-center text-blue-400 shadow-blue-500 shadow-sm font-bold rounded 
                  text-2xl" id="add_btn">+</button>
             </div>
 
             <div class="grid grid-rows-2">
                 <div>
-                    <input class="h-10 focus:outline-none border-2 p-1 border-blue-400 rounded w-44 md:w-48 shadow-blue-500 shadow-sm" type="text" name="" id="description" placeholder="description" />
+                    <input class="h-10 focus:ring-4 focus:ring-blue-400 focus:outline-none p-1 rounded w-44 md:w-48 shadow-blue-500 shadow-sm" type="text" name="" id="description" placeholder="description" />
                 </div>
 
                 <div>
-                    <input class="h-10 focus:outline-none border-2 p-1 border-blue-400 rounded w-44 md:w-48 mt-1 shadow-blue-500 shadow-sm" type="url" name="" id="url" placeholder="link" />
+                    <input class="h-10 focus:ring-4 focus:ring-blue-400  focus:outline-none p-1 rounded w-44 md:w-48 mt-1 shadow-blue-500 shadow-sm" type="url" name="" id="url" placeholder="link" />
                 </div>
             </div>
         </div>
-        <div class="pt-36 mx-4">
+        <div id="links" class="pt-36 mx-4">
             <ol id="list"></ol>
         </div>
+        <footer class="h-10">
+
+        </footer>
         <script src="./js/index.js"></script>
     </body>
 </html>

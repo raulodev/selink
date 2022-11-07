@@ -5,28 +5,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Selink</title>
+        <meta name="description" content="Aplicación para guardar enlaces." />
+        <meta name="author" content="Raúl Cobiellas" />
+        <meta name="theme-color" content="rgb(96 165 250)" />
         <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="./css/index.css" />
     </head>
 
+
     <body class="bg-white">
-        <div class="grid grid-cols-3 md:grid-cols-2 w-full bg-blue-300 p-4">
+        <div class="grid grid-cols-3 md:grid-cols-2 w-full bg-blue-400 p-4 fixed">
             <div class="col-span-1 flex justify-end items-center">
-                <button class="bg-blue-400 w-10 h-10 p-1 mr-6 text-center text-white font-bold rounded hover:bg-blue-500 text-2xl" id="add_btn">+</button>
+                <button class="bg-white w-12 h-12 p-1 mr-6 text-center text-blue-400 shadow-blue-500 shadow-sm font-bold rounded hover:bg-gray-100 
+                 text-2xl" id="add_btn">+</button>
             </div>
 
             <div class="grid grid-rows-2">
                 <div>
-                    <input class="focus:outline-none border-2 p-1 border-blue-400 rounded w-44" type="text" name="" id="description" placeholder="description" />
+                    <input class="h-10 focus:outline-none border-2 p-1 border-blue-400 rounded w-44 md:w-48 shadow-blue-500 shadow-sm" type="text" name="" id="description" placeholder="description" />
                 </div>
 
                 <div>
-                    <input class="focus:outline-none border-2 p-1 border-blue-400 rounded w-44 mt-1" type="url" name="" id="url" placeholder="link" />
+                    <input class="h-10 focus:outline-none border-2 p-1 border-blue-400 rounded w-44 md:w-48 mt-1 shadow-blue-500 shadow-sm" type="url" name="" id="url" placeholder="link" />
                 </div>
             </div>
         </div>
-        <div class="mt-4 mx-4">
-            <ul id="list"></ul>
+        <div class="pt-36 mx-4">
+            <ol id="list"></ol>
         </div>
         <script src="./js/index.js"></script>
     </body>

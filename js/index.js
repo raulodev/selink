@@ -49,7 +49,7 @@ function recharge_data() {
         const input = document.createElement("a");
         input.textContent = d;
         input.href = u;
-        input.className='text-blue-400 font-semibold text-xl'
+        input.className='text-blue-400 font-normal text-xl'
         
         const iconSvg = document.createElementNS('http://www.w3.org/2000/svg','svg')
         iconSvg.setAttribute('fill','none')
@@ -67,15 +67,15 @@ function recharge_data() {
         
         const btn_delete = document.createElement("button");
         btn_delete.id = i;
-        btn_delete.className='ml-4 mt-1 border text-blue-500 hover:text-white border-blue-400 border hover:border-white hover:bg-blue-400  p-1 text-center text-white rounded font-bold'
+        btn_delete.className='mr-4 border text-blue-500 hover:text-white border-blue-400 border hover:border-white hover:bg-blue-400  p-1 text-center text-white rounded'
         btn_delete.appendChild(iconSvg)
         btn_delete.onclick = del_btn;
 
         const li = document.createElement("li");
         li.id = i;
-        li.className='text-center border mb-4 p-1 w-auto rounded'
-        li.appendChild(input);
+        li.className='text-left border mb-4 p-1 w-auto rounded flex items-center'
         li.appendChild(btn_delete);
+        li.appendChild(input);
 
         const list = document.querySelector("#list");
         list.appendChild(li);
@@ -105,15 +105,17 @@ function control_nav() {
     
     if (nav.className=='hidden'){
 
-        btn.innerText='→'
+        btn.innerText='-'
+        
         nav.className='grid grid-cols-3 md:grid-cols-2  w-full bg-gradient-to-tr from-blue-500 to-blue-600 p-4 fixed shadow-md'
         links.className='pt-36 mx-4'
         
     } else {
         
+        btn.innerText='+'
+        
         nav.className='hidden'
         links.className='pt-4 mx-4'
-        btn.innerText='←'
 
     }
 }
